@@ -4,9 +4,9 @@ class Console {
   constructor() {
     this.buttons = [];
     for (let color of ['green', 'blue', 'yellow', 'red']) {
-      this.buttons.push(new Button(color));
+      this.buttons.push({ 'color': new Button(color) });
     }
-    this.currentSequence = [];
+    this.sequence = [];
   }
 
   endGame() {
