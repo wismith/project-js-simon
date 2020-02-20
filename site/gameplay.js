@@ -9,3 +9,31 @@ $('.simon-button.green').on('click', () => player.clickButton('green'));
 $('.simon-button.blue').on('click', () => player.clickButton('blue'));
 $('.simon-button.yellow').on('click', () => player.clickButton('yellow'));
 $('.simon-button.red').on('click', () => player.clickButton('red'));
+
+$('.simon-button.green').on('click', function() {
+  alert('test');
+});
+$('.simon-button.blue').on('click', () => player.clickButton('blue'));
+$('.simon-button.yellow').on('click', () => player.clickButton('yellow'));
+$('.simon-button.red').on('click', () => player.clickButton('red'));
+
+let greenButton = document.getElementById("green");
+let redButton = document.getElementById("red");
+let blueButton = document.getElementById("blue");
+let yellowButton = document.getElementById("yellow");
+
+greenButton.addEventListener('click', function() {
+  player.clickButton('green');
+});
+
+redButton.addEventListener('click', function() {
+  player.clickButton('red');
+});
+
+yellowButton.addEventListener('click', function() {
+  player.clickButton('yellow');
+});
+
+blueButton.addEventListener('click', function() {
+  player.clickButton('blue');
+});
