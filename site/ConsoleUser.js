@@ -5,6 +5,10 @@ class ConsoleUser {
     this.console = console;
   }
 
+  beginGame() {
+    this.console.startNewGame();
+  }
+
   clickButton(color) {
     this.console.click(color);
   }

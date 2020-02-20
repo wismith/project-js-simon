@@ -12,19 +12,33 @@ class Console {
     this.userSequence = [];
   }
 
-  addRound() {
+  startNewGame() {
+    this.nextRound();
+  }
+
+  nextRound() {
     let randomIndex = Math.floor(Math.random() * 4);
     this.gameSequence.push(this.colors[randomIndex]);
+    this.promptMove();
+  }
+
+  promptMove() {
+    // Play the current sequence for the user
+  }
+
+  moveCorrect() {
+    // Check the button the user clicked against the corresponding item of the pattern
+    return this.userSequence.join('') === this.gameSequence.join('');
   }
 
   click(color) {
     this.buttons[color].click();
     this.userSequence.push(this.refDict[color]);
-  }
-
-  checkMove() {
-    // Check the button the user clicked against the corresponding item of the pattern
-    return this.userSequence.join('') === this.gameSequence.join('');
+    if (this.moveCorrect()) {
+      this.nextRound();
+    } else {
+      this.endGame();
+    }
   }
 
   endGame() {
