@@ -1,7 +1,7 @@
 {
-  "name": "template-javascript",
-  "version": "0.0.0",
-  "description": "JavaScript template",
+  "name": "project-js-simon-says",
+  "version": "0.1.0",
+  "description": "Build a Simon Says game",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
@@ -11,16 +11,18 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "jsdoc": "^3.6.3"
+    "jsdoc": "^3.6.3",
+    "surge": "^0.21.3"
   },
   "scripts": {
     "docs": "npx jsdoc -c ./.jsdoc.conf.json",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "publish": "npx surge site"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jfarmer/template-javascript.git"
+    "url": "git+https://github.com/jfarmer/project-js-simon-says.git"
   },
   "keywords": [
     "javascript",
@@ -29,7 +31,7 @@
   "author": "Jesse Farmer <jesse@20bits.com>",
   "license": "CC-BY-SA-4.0",
   "bugs": {
-    "url": "https://github.com/jfarmer/template-javascript/issues"
+    "url": "https://github.com/jfarmer/project-js-simon-says/issues"
   },
-  "homepage": "https://github.com/jfarmer/template-javascript#readme"
+  "homepage": "https://github.com/jfarmer/project-js-simon-says#readme"
 }
