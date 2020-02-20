@@ -24,4 +24,8 @@ We've included the [jQuery][url-jquery] library, which can make it easier to rea
 
 You're free to use any libraries, tools, or technologies you think are appropriate. You can modify the files any way you want: edit them, add code to them, create more files, etc.
 
+You can use `console.log` to see what your code is doing. It will be displayed in the debugging console, which you can activate by right-clicking the page, selecting *Inspect Element*, and then clicking the *Console* tab.
+
+If you're using Chrome on a Mac, you can also open it with `Command + Option + j`.
+
 [url-jquery]: https://api.jquery.com/
