@@ -7,6 +7,8 @@ class Button {
 
   click() {
     alert(`You clicked the ${this.color} button.`);
+    // Pulse color
+    // play sound
   }
 }
 

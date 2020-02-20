@@ -1,4 +1,3 @@
-let Console = require('./Console');
 
 class ConsoleUser {
   constructor(name, console) {
@@ -7,7 +6,7 @@ class ConsoleUser {
   }
 
   clickButton(color) {
-    this.console.buttons[color].click();
+    this.console.click(color);
   }
 }
 
