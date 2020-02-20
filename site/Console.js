@@ -3,10 +3,10 @@ let Button = require('./Button');
 class Console {
   constructor() {
     this.colors = ['green', 'blue', 'yellow', 'red'];
-    this.refDict = { 'green': 'g', 'blue': 'b', 'yellow': 'y', 'red': 'r' };
+    this.refDict = { 'green': '.simon-button.green', 'blue': '.simon-button.blue', 'yellow': '.simon-button.yellow', 'red': '.simon-button.red' };
     this.buttons = [];
     for (let color of this.colors) {
-      this.buttons.push({ color: new Button(color) });
+      this.buttons.push({ color: new Button(color, this.refDict[color]) });
     }
     this.gameSequence = [];
     this.userSequence = [];
@@ -24,6 +24,9 @@ class Console {
 
   promptMove() {
     // Play the current sequence for the user
+    for (let item of this.gameSequence) {
+      this.buttons[item].click();
+    }
   }
 
   moveCorrect() {
