@@ -1,6 +1,8 @@
-# Simon Says
+# Simon
 
-Let's try to build a Simon Says game.
+Let's build a single-player Simon game.
+
+Watch <https://www.youtube.com/watch?v=1Yqj76Q4jJ4> to see how the game works.
 
 ## Instructions
 
@@ -14,9 +16,7 @@ The `site/` directory is where the HTML, CSS, and JS lives.
 
 ## Iterations
 
-We are trying to implement the single player version of this game: <https://www.youtube.com/watch?v=1Yqj76Q4jJ4>
-
-The machine plays a sequence of colors/sounds and the player has to repeat them in the same order. The game continues until the player makes a mistake. Their score is the total number of turns it took.
+With a real Simon game, the machine plays a sequence of colors/sounds and the player has to repeat them in the same order. The game continues until the player makes a mistake. Their final score is the total number of turns it took.
 
 It'll be your job to break down the work into iterations and divide the learning.
 

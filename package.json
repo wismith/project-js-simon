@@ -1,7 +1,7 @@
 {
-  "name": "project-js-simon-says",
+  "name": "project-js-simon",
   "version": "0.1.0",
-  "description": "Build a Simon Says game",
+  "description": "Build a Simon game",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jfarmer/project-js-simon-says.git"
+    "url": "git+https://github.com/jfarmer/project-js-simon.git"
   },
   "keywords": [
     "javascript",
@@ -31,7 +31,7 @@
   "author": "Jesse Farmer <jesse@20bits.com>",
   "license": "CC-BY-SA-4.0",
   "bugs": {
-    "url": "https://github.com/jfarmer/project-js-simon-says/issues"
+    "url": "https://github.com/jfarmer/project-js-simon/issues"
   },
-  "homepage": "https://github.com/jfarmer/project-js-simon-says#readme"
+  "homepage": "https://github.com/jfarmer/project-js-simon#readme"
 }
