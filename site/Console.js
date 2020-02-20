@@ -26,6 +26,7 @@ class Console {
     // Play the current sequence for the user
     for (let item of this.gameSequence) {
       this.buttons[item].click();
+      setTimeout(() => true, 250);
     }
   }
 
