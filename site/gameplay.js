@@ -1,5 +1,3 @@
-let ConsoleUser = require('./ConsoleUser');
-let Console = require('./Console');
 
 let simonConsole = new Console();
 let player = new ConsoleUser('name', simonConsole);
@@ -10,14 +8,7 @@ $('.simon-button.blue').on('click', () => player.clickButton('blue'));
 $('.simon-button.yellow').on('click', () => player.clickButton('yellow'));
 $('.simon-button.red').on('click', () => player.clickButton('red'));
 
-$('.simon-button.green').on('click', function() {
-  alert('test');
-});
-$('.simon-button.blue').on('click', () => player.clickButton('blue'));
-$('.simon-button.yellow').on('click', () => player.clickButton('yellow'));
-$('.simon-button.red').on('click', () => player.clickButton('red'));
-
-let greenButton = document.getElementById("green");
+/* let greenButton = document.getElementById("green");
 let redButton = document.getElementById("red");
 let blueButton = document.getElementById("blue");
 let yellowButton = document.getElementById("yellow");
@@ -37,3 +28,4 @@ yellowButton.addEventListener('click', function() {
 blueButton.addEventListener('click', function() {
   player.clickButton('blue');
 });
+ */

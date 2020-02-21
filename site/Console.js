@@ -1,4 +1,4 @@
-let Button = require('./Button');
+// let Button = require('./Button');
 
 class Console {
   constructor() {
@@ -6,7 +6,7 @@ class Console {
     this.refDict = { 'green': '.simon-button.green', 'blue': '.simon-button.blue', 'yellow': '.simon-button.yellow', 'red': '.simon-button.red' };
     this.buttons = [];
     for (let color of this.colors) {
-      this.buttons.push({ color: new Button(color, this.refDict[color]) });
+      this.buttons.push(new Button(color, this.refDict[color]));
     }
     this.gameSequence = [];
     this.userSequence = [];
@@ -24,9 +24,15 @@ class Console {
 
   promptMove() {
     // Play the current sequence for the user
+    console.log(this.buttons);
     for (let item of this.gameSequence) {
-      this.buttons[item].click();
-      setTimeout(() => true, 250);
+      setTimeout((item) => {
+        for (let button of this.buttons) {
+          if (button.color === item.color) {
+            button.click();
+          }
+        }
+      }, 1000);
     }
   }
 
@@ -36,12 +42,19 @@ class Console {
   }
 
   click(color) {
-    this.buttons[color].click();
-    this.userSequence.push(this.refDict[color]);
-    if (this.moveCorrect()) {
-      this.nextRound();
-    } else {
-      this.endGame();
+    for (let button of this.buttons) {
+      if (button.color === color) {
+        button.click();
+      }
+    }
+    this.userSequence.push(color);
+    if (this.userSequence.length === this.gameSequence.length) {
+      if (this.moveCorrect()) {
+        this.userSequence = [];
+        this.nextRound();
+      } else {
+        this.endGame();
+      }
     }
   }
 
@@ -49,5 +62,3 @@ class Console {
     return 'The game has ended';
   }
 }
-
-module.exports = Console;

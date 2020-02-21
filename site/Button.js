@@ -7,12 +7,11 @@ class Button {
   }
 
   click() {
-    alert(`You clicked the ${this.color} button.`);
     $(this.htmlElement).addClass('clicked');
-    setTimeout(() => true, 500);
-    $(this.htmlElement).removeClass('clicked');
+
+    setTimeout(() => {
+      $(this.htmlElement).removeClass('clicked');
+    }, 250);
     // play sound
   }
 }
-
-module.exports = Button;

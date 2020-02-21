@@ -13,5 +13,3 @@ class ConsoleUser {
     this.console.click(color);
   }
 }
-
-module.exports = ConsoleUser;
