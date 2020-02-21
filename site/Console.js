@@ -24,16 +24,39 @@ class Console {
 
   promptMove() {
     // Play the current sequence for the user
-    console.log(this.buttons);
+    // We need a sequence of nested setTimeout functions
+    let doSetTimeout = (i) => {
+      if (i === this.gameSequence.length) {
+        return;
+      }
+      setTimeout(() => {
+        console.log('testing');
+        for (let button of this.buttons) {
+          console.log('button.color:');
+          console.log(button.color);
+          console.log('game.sequence[i]:');
+          console.log(this.gameSequence[i]);
+          if (button.color === this.gameSequence[i]) {
+            console.log('test');
+            button.click();
+          }
+        }
+        doSetTimeout(i + 1);
+      }, 750);
+    };
+    console.log('blah');
+    doSetTimeout(0);
+
+    /* console.log(this.buttons);
     for (let item of this.gameSequence) {
-      setTimeout((item) => {
+      setTimeout(() => {
         for (let button of this.buttons) {
           if (button.color === item.color) {
             button.click();
           }
         }
       }, 1000);
-    }
+    } */
   }
 
   moveCorrect() {
