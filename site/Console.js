@@ -73,6 +73,10 @@ class Console {
       }
     }
     this.userSequence.push(color);
+    if (this.userSequence.join('') !== this.gameSequence.slice(0, this.userSequence.length).join('')) {
+      this.endGame();
+      return;
+    }
     if (this.userSequence.length === this.gameSequence.length) {
       if (this.moveCorrect()) {
         this.userSequence = [];

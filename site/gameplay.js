@@ -8,6 +8,22 @@ $('.simon-button.blue').on('click', () => player.clickButton('blue'));
 $('.simon-button.yellow').on('click', () => player.clickButton('yellow'));
 $('.simon-button.red').on('click', () => player.clickButton('red'));
 
+document.addEventListener('keypress', (event) => {
+  let keyName = event.key;
+  if (keyName === 't') {
+    player.clickButton('green');
+  };
+  if (keyName === 'y') {
+    player.clickButton('red');
+  };
+  if (keyName === 'g') {
+    player.clickButton('yellow');
+  }
+  if (keyName === 'h') {
+    player.clickButton('blue');
+  }
+});
+
 /* let greenButton = document.getElementById("green");
 let redButton = document.getElementById("red");
 let blueButton = document.getElementById("blue");
