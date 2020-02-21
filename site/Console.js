@@ -4,9 +4,15 @@ class Console {
   constructor() {
     this.colors = ['green', 'blue', 'yellow', 'red'];
     this.refDict = { 'green': '.simon-button.green', 'blue': '.simon-button.blue', 'yellow': '.simon-button.yellow', 'red': '.simon-button.red' };
+    this.soundDict = {
+      'green': new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3'),
+      'red': new Audio('https://s3.amazonaws.com/freecodecamp/simonSound2.mp3'),
+      'blue': new Audio('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3'),
+      'yellow': new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3'),
+    };
     this.buttons = [];
     for (let color of this.colors) {
-      this.buttons.push(new Button(color, this.refDict[color]));
+      this.buttons.push(new Button(color, this.refDict[color], this.soundDict[color]));
     }
     this.gameSequence = [];
     this.userSequence = [];
@@ -19,7 +25,9 @@ class Console {
   nextRound() {
     let randomIndex = Math.floor(Math.random() * 4);
     this.gameSequence.push(this.colors[randomIndex]);
-    this.promptMove();
+    setTimeout(() => {
+      this.promptMove();
+    }, 1000);
   }
 
   promptMove() {
@@ -32,19 +40,13 @@ class Console {
       setTimeout(() => {
         console.log('testing');
         for (let button of this.buttons) {
-          console.log('button.color:');
-          console.log(button.color);
-          console.log('game.sequence[i]:');
-          console.log(this.gameSequence[i]);
           if (button.color === this.gameSequence[i]) {
-            console.log('test');
             button.click();
           }
         }
         doSetTimeout(i + 1);
-      }, 750);
+      }, 600);
     };
-    console.log('blah');
     doSetTimeout(0);
 
     /* console.log(this.buttons);
@@ -82,6 +84,6 @@ class Console {
   }
 
   endGame() {
-    return 'The game has ended';
+    setTimeout(() => alert('You\'ve lost the game!'), 650);
   }
 }

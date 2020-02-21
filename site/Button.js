@@ -8,10 +8,11 @@ class Button {
 
   click() {
     $(this.htmlElement).addClass('clicked');
+    this.sound.play();
 
     setTimeout(() => {
       $(this.htmlElement).removeClass('clicked');
-    }, 250);
+    }, 200);
     // play sound
   }
 }
